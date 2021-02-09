@@ -1,0 +1,199 @@
+/* getbootstrap.com / bootsnip
+boostrap icon for icon you need
+link css cua thu vien phai de ben tren.
+link file css cua minh thi de phia duoi de overwrite len*/
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #7c7c7c
+}
+/* header */
+
+#menu li a { /* phan menu nam trong the a */
+    font-family: 'Changa One', cursive;
+    color: #333333;
+
+}
+
+#menu li a:hover,
+#menu li.active a {  /* re chuot vao chu thi se to mau xanh len */
+    color: #2fa0b5;
+    background-color: none;
+}
+
+#frm-search {
+    display: block; /* hinh chu nhat */
+    width: 169px;
+    height: 32px;
+    border: 1px solid #d5d5d5;
+    padding: 4px 11px 6px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    margin: 0 10px;
+}
+
+#search-word {
+    border: none;
+    background: white;
+    box-shadow: 0 0 0 ;
+    padding: 0;
+}
+#btn-search {
+    border: none;
+    width: 18px;
+    background: url(../images/search_button.png) 0 0 no-repeat;
+
+}
+
+#social a {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0;
+    height: 25px;
+    width: 27px;
+    cursor: pointer;
+}
+
+#social a.twitter {
+    background: url(../images/twitter.png) 0 0 no-repeat;
+}
+
+#social a.twitter:hover {
+    background: url(../images/twitter_active.png) 0 0 no-repeat ;
+}
+
+#social a.facebook {
+    background: url(../images/facebook.png) 0 0 no-repeat;
+}
+
+#social a.facebook:hover {
+    background: url(../images/facebook_active.png) 0 0 no-repeat ;
+}
+
+/* banner */
+#banner {
+    background: url(../images/bg_slider.gif) center bottom repeat;
+    color: white;
+    padding: 110px 0 40px;
+}
+
+#banner h4 {
+    font-size: 60px;
+    line-height: 60px;
+    font-family: 'Changa One', cursive;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#btn-menu {
+    display: inline-block;
+    font: 30px 'Changa One' , cursive;
+    line-height: 36px;
+    background-color: #fa97c2;
+    padding: 14px 62px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 30px 0;
+    color: white;
+}
+
+#dots {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+}
+#dots li {
+    display: inline-block; /* la inline-block */
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    text-align: left;
+    text-indent: 99999px;
+    background: white;
+    margin: 0 2px;
+    position: relative;
+}
+
+#dots li span {
+    border-radius: 9px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+}
+#dots li.active span,
+#dots li:hover span {
+    box-shadow: 0;
+    background: #73c926;
+}
+
+@media screen and (min-width: 768px) {
+    #menu li{ /* lam cho menu rong thi cach ra, nho thu gon lai */
+        margin-left: 25px;
+        padding: 0px;
+    }
+#logo {
+    position: relative;
+}
+
+#logo::after {
+    position: absolute;
+    content: "";
+    background: url(../images/logo_bg.png) 0 0 no-repeat;
+    width: 188px;
+    height: 133px;
+    bottom: -140px;
+    left: -2px;
+}
+#frm-search {
+    position: relative;
+}
+#frm-search::after {
+    position: absolute; /* vi tri tuyet doi, hinh tren di dau thi hinh duoi cung di theo */
+    content: "";
+    background: url(../images/search_bg.png) 0 0 no-repeat;
+    width: 230px;
+    height: 44px;
+    bottom: -73px;
+    left: 10px;
+}
+}
+
+/* main */ 
+h4 {
+    font-family: 'Changa One', cursive;
+    font-weight: 400;
+    color: #333333;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+a.readmore {
+    text-decoration: underline;
+    color: #2fa0b5;
+    
+}
+/* about */
+.about {
+    background: #fa97c2;
+    color: #814e64;
+}
+
+h3{
+    font-family: 'Changa One', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    margin: 10px 0;
+
+}
+
+.about div > img {
+    float: left;
+    margin: 20px;
+}
