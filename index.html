@@ -66,10 +66,11 @@
     </nav>
   </header>
   <!--header-->
+  <div id="content">
 
   <!--banner-->
   <div class="container-fluid" id="banner">
-    <div class="container; text-center">
+    <div class="container text-center">
       <h4 class="text-white">Tasty cakes and ice-cream <br> for everyone</h4>
       <div>
         <a id="btn-menu" href="#">see our menu</a>
@@ -124,56 +125,11 @@
   <!--NEWS-->
   <div class="container py-5">
     <h3>News</h3>
-    <div class="row">
-      <div class="col">
-        <div class="row">
-          <div class="col-sm=4">
-            <div class="date">25. <br>Dec. </div>
-            <a href="#" class="readmore">Read more</a>
-          </div>
-          <div class="col-sm-8">
-            <h4>Accumsanet</h4>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col">
-        <div class="row">
-          <div class="col-sm=4">
-            <div class="date">25. <br>Dec. </div>
-            <a href="#" class="readmore">Read more</a>
-          </div>
-          <div class="col-sm-8">
-            <h4>Accumsanet</h4>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col">
-        <div class="row">
-          <div class="col-sm=4">
-            <div class="date">25. <br>Dec. </div>
-            <a href="#" class="readmore">Read more</a>
-          </div>
-          <div class="col-sm-8">
-            <h4>Accumsanet</h4>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-
+    <div class="row" id="news">
     </div>
   </div>
   <!--news-->
-
+</div>
   <!--footer-->
   <footer class="container-fluid">
     <nav>
@@ -200,22 +156,60 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script> 
   <script src="js/handlebars-v4.7.7.js"> </script>
+
   <script id="products-template" type="text/x-handlebars-template">
     {{#each data}}
     <div class="col-md-3 col-sm-6 text-center">
       <img src="{{thumbpath}}" alt="">
       <h4>{{name}}</h4>
       <div class="pb-2">{{summary}}</div>
-      <a class="readmore" href="#">Read more</a>
+      <a class="readmore" href="#" onclick="loadData('products/{{id}}', '#content', '#details-template');">Read more</a>
     </div>  
      {{/each}}
   </script>
 
-  <script>   </script>
+  <script id="news-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="col">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="date"> {{date}} </div>
+          <a href="#" class="readmore">Read more</a>
+        </div>
+        <div class="col-sm-8">
+          <h4> {{name}} </h4>
+          <div>{{summary}}</div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  
+  </script>
 
+  <script id="details-template" type="text/x-handlebars-template">
+    <!-- small banner-->
+  
+  <div class="container-fluid" id="small-banner"> 
+
+  </div>
+
+    <!-- small banner-->
+
+    <!-- detail-->
+    {{#each data}}
+    <div class="container py-5">
+      <h3 class="text-dark"> {{name}}  </h3>
+      <div> {{{description}}} </div>
+    </div>
+    {{/each}}
+    <!-- detail-->
+
+  </script>
+ 
   <script>
     $(document).ready(function() {     // sau khi web load xong thi moi thuc hien ham nay
-      $.ajax({  // ham jquery goi api
+   
+      /*   $.ajax({  // ham jquery goi api
         url: 'https://web1-api.herokuapp.com/api/products',
         cache: false,   // moi lan lay data la lay moi
         success: function(data) {
@@ -226,12 +220,31 @@
           let source = $('#products-template').html();
           let template = Handlebars.compile(source);
           $(target).html(template(jsonData));
+        }       
+      }); */
 
-        }
-        
-      });
+      loadData ('products', '#products', '#products-template');
+      loadData ('news', '#news', '#news-template');
 
+     
     });
+
+    function loadData (request, targetID, sourceID) {    // viet 1 function chung de dua du lieu vao dung 3 vi tri
+      $.ajax({  // ham jquery goi api
+        url: 'https://web1-api.herokuapp.com/api/' + request,
+        cache: false,   // moi lan lay data la lay moi
+        success: function(data) {
+          let jsonData = {
+            data: data
+          };
+          let target = $(targetID); // get id news
+          let source = $(sourceID).html();
+          let template = Handlebars.compile(source);
+          $(target).html(template(jsonData));
+        }       
+      });
+    }
+
   </script>
 
 
