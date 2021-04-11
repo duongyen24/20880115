@@ -24,7 +24,7 @@
   <header class="container">
     <nav class="navbar navbar-expand-sm navbar-light px-0">
       <!-- navbar cua bootstrap;  px: padding(le cua khung ben ngoai)-->
-      <a class="navbar-brand" href="#" id="logo">
+      <a class="navbar-brand" href="index.html" id="logo">
         <img src="images/logo.png" alt="Ice-cream">
       </a>
       <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
@@ -72,91 +72,36 @@
 
   </div>
 
-  <div class="container">
+  <div id="content">
+  <div class="container py-5">
 	<div class="row">
-	  <div class="col-md-8">
-		  <h3 class="text-dark">About us</h3>
-		  <img src="images/about-1.jpg" alt="" class="round-img">
-		  <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima accusantium dolorum accusamus odit tenetur rerum consectetur similique. Minus accusamus, tempore et consectetur excepturi animi. Autem excepturi esse doloremque debitis libero?</p>
-		  <p> <a href="#" class="readmore">Read more</a></p>
+    <!-- about us-->
+	  <div class="col-md-8" id="aboutus">
+		  
+	  </div>
+     <!-- about us-->
+      <!-- our vision-->
+
+	  <div class="col-md-4" id="visions">
 
 	  </div>
-
-	  <div class="col-md-4">
-		  <h3 class="text-dark">Our Vision</h3>
-		  <div class="row">
-			  <div class="col-sm-4">
-				<img src="images/vision/vision-1.jpg" alt="" class="round-img">
-			  </div>
-			  <div class="col-sm-8">
-				<h4 class="py-0 my-0">Accumsan et</h4>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est explicabo ipsa earum nobis qui ipsam nemo possimus quasi placeat ullam dicta error illum veritatis, quam, quaerat, temporibus minus. Eum, est?</p>
-			  </div>
-			  <div class="col-sm-4">
-				<img src="images/vision/vision-2.jpg" alt="" class="round-img">
-			  </div>
-			  <div class="col-sm-8">
-				<h4 class="py-0 my-0">Accumsan et</h4>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est explicabo ipsa earum nobis qui ipsam nemo possimus quasi placeat ullam dicta error illum veritatis, quam, quaerat, temporibus minus. Eum, est?</p>
-			  </div>
-		  </div>
-
-
-	  </div>
+    <!-- our vision-->
 	</div>
   </div>
-
+<!-- test-->
   <div class="container-fluid about py-5"> <!-- fluid cho tran man hinh, su dung thuoc tinh cua about-->
 	<div class="container" id="testimonials">
-		<h3 class="text-white">Testimonials</h3>
-		<div class="row">
-			<div class="col">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores vitae quam itaque ratione! Excepturi ducimus, dolorem officiis, dolor deserunt minima reiciendis praesentium commodi ratione sint ut dignissimos, accusamus culpa.</p>
-				<div class="text-white">Patrick Pool</div>
-				<a href="mailto:info@demolink.org">info@demolink.org</a>
-			</div>
-			<div class="col">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores vitae quam itaque ratione! Excepturi ducimus, dolorem officiis, dolor deserunt minima reiciendis praesentium commodi ratione sint ut dignissimos, accusamus culpa.</p>
-				<div class="text-white">Patrick Pool</div>
-				<a href="mailto:info@demolink.org">info@demolink.org</a>
-			</div>
-			<div class="col">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores vitae quam itaque ratione! Excepturi ducimus, dolorem officiis, dolor deserunt minima reiciendis praesentium commodi ratione sint ut dignissimos, accusamus culpa.</p>
-				<div class="text-white">Patrick Pool</div>
-				<a href="mailto:info@demolink.org">info@demolink.org</a>
-			</div>
-		</div>
+	
 
 	</div>
   </div>
-
-  <div class="container py-5">
-	  <h3 class="text-dark">Our Team</h3>
-	  <div class="row">
-		  <div class="col-md-3">
-			  <img src="images/our-team/team-1.jpg" alt="" class="img-rounded">
-			  <p class="text-dark font-weight-bold pt-3">Emily Cramer</p>
-			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, iure!</p>
-		  </div>
-		  <div class="col-md-3">
-			<img src="images/our-team/team-2.jpg" alt="" class="img-rounded">
-			<p class="text-dark font-weight-bold pt-3">Emily Cramer</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, iure!</p>
-		</div>
-		<div class="col-md-3">
-			<img src="images/our-team/team-3.jpg" alt="" class="img-rounded">
-			<p class="text-dark font-weight-bold pt-3">Emily Cramer</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, iure!</p>
-		</div>
-		<div class="col-md-3">
-			<img src="images/our-team/team-4.jpg" alt="" class="img-rounded">
-			<p class="text-dark font-weight-bold pt-3">Emily Cramer</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, iure!</p>
-		</div>
-
-	  </div>
+<!-- test-->
+<!-- team-->
+  <div class="container py-5" id="team">
+	  
   </div>
+<!-- team-->
+</div>
 
 
 
@@ -178,3 +123,122 @@
   </footer>
 
   <!--footer-->
+
+   <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS 
+  jQuery 3 slim version doesn't support ajax.-->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="js/handlebars-v4.7.7.js"> </script>
+
+  <script id="aboutus-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <h3 class="text-dark">About us</h3>
+		  <img src="{{thumbpath}}" alt="" class="round-img">
+		 {{{summary}}}
+		  <p> <a href="#" class="readmore" onclick="loadData('aboutus/{{id}}', '#content', '#details-template');">Read more</a> </p>
+    
+    {{/each}}
+  </script>
+
+  <script id="details-template" type="text/x-handlebars-template">
+    <!-- detail-->
+    {{#each data}}
+    <div class="container py-5 mb-5">
+      <h3 class="text-dark"> {{name}}  </h3>
+      <div> 
+        <img class="round-img pull-left" src="{{imagepath}}">
+        {{{description}}} 
+      </div>
+    </div>
+    {{/each}}
+    <!-- detail-->
+
+  </script>
+
+  <script id="testimonials-template" type="text/x-handlebars-template">
+    <h3 class="text-white">Testimonials</h3>
+		<div class="row">
+      {{#each data}}
+			<div class="col">
+				<p>{{summary}}</p>
+				<div class="text-white">{{name}}</div>
+				<a href="mailto:{{email}}">{{email}}</a>
+			</div>	
+      {{/each}}		
+		</div>
+
+  </script>
+
+  <script id="team-template" type="text/x-handlebars-template">
+    <h3 class="text-dark">Our Team</h3>
+	  <div class="row">
+      {{#each data}}
+		  <div class="col-md-3">
+        <a href="#" onclick="loadData('team/{{id}}', '#content', '#details-template');">
+			  <img src="{{thumbpath}}" alt="" class="img-rounded">
+        </a>
+			  <p class="text-dark font-weight-bold pt-3">{{name}}</p>
+			  <p>{{summary}}</p>
+		  </div>
+		  {{/each}}
+	  </div>
+  </script>
+
+
+  <script id="visions-template" type="text/x-handlebars-template">
+  
+    <h3 class="text-dark">Our Vision</h3>
+    {{#each data}}
+		  <div class="row">
+			  <div class="col-sm-4">
+          <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template');">  <!-- click on image to show more-->
+				<img src="{{thumbpath}}" class="round-img">
+          </a>
+			  </div>
+			  <div class="col-sm-8">
+          <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template');">  <!-- click on title to show more-->
+				<h4 class="py-0 my-0">{{name}}</h4>
+          </a>
+				<p>{{summary}}</p>
+			  </div>
+			  </div>
+    
+    {{/each}}
+  </script>
+
+ 
+
+  <script src="js/20880115.js"> </script>
+ 
+  <script>
+    $(document).ready(function() {     // sau khi web load xong thi moi thuc hien ham nay
+   
+      /* $.ajax({  // ham jquery goi api
+        url: 'https://web1-api.herokuapp.com/api/products',
+        cache: false,   // moi lan lay data la lay moi
+        success: function(data) {
+          let jsonData = {
+            data: data
+          };
+          let target = $('#products'); // get sp co id product
+          let source = $('#products-template').html();
+          let template = Handlebars.compile(source);
+          $(target).html(template(jsonData));
+        }       
+      }); */
+
+      loadData ('aboutus', '#aboutus', '#aboutus-template');
+      loadData ('visions', '#visions', '#visions-template');
+      loadData ('testimonials', '#testimonials', '#testimonials-template');
+      loadData ('team', '#team', '#team-template');
+    });
+
+  </script>
+
+  
+</body>
+
+</html>

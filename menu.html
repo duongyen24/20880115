@@ -73,17 +73,12 @@
   </div>
   <div class="container py-5">
 	  <h3 class="text-dark">Menu</h3>
-	  <div class="row">
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img1.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img2.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img3.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img4.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img5.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img6.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img7.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img8.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img9.jpg" alt="" class="img-thumbnail"></div>
-		  <div class="col-sm-6 col-md-4 col-lg-3"><img src="images/gallery/gallery-img10.jpg" alt="" class="img-thumbnail"></div>
+    <div class="font-weight-bold">Filter by category:</div>
+    <ul class="nav justify-content-left" id="gallery-categories">
+       
+    </ul>
+	  <div class="row" id="gallery">
+		  
 	  </div>
   </div>
 
@@ -106,3 +101,57 @@
   </footer>
 
   <!--footer-->
+
+    <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS 
+  jQuery 3 slim version doesn't support ajax.-->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="js/handlebars-v4.7.7.js"> </script>
+  <script src="js/20880115.js"> </script>
+
+  <script id="gallery-categories-template" type="text/x-handlebars-template">
+    <li class="nav-item">
+      <a class="nav-link disabled pl-0" href="#" onclick="loadGallery()">Show all</a>
+  </li>
+  {{#each data}}
+  <li class="nav-item">
+      <a class="nav-link" href="#" onclick="loadGallery({{id}})">{{name}}</a>
+  </li>
+ {{/each}}
+  </script>
+
+  <script id="gallery-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="col-sm-6 col-md-4 col-lg-3"><img src="{{imagepath}}" alt="" class="img-thumbnail"></div>
+    {{/each}}
+  </script>
+
+
+  <script>
+    $(document).ready(function() {     // sau khi web load xong thi moi thuc hien ham nay
+      loadData ('gallery-categories', '#gallery-categories', '#gallery-categories-template');
+      loadData ('gallery', '#gallery', '#gallery-template');
+      
+    })
+
+    function loadGallery(id) {
+      if (id) {  //load tung catogery
+        loadData('gallery/categories/${id}','#gallery','#gallery-template');
+      }
+      else {   //load show all
+        loadData ('gallery', '#gallery', '#gallery-template');
+      }
+
+    }
+
+  </script>
+
+
+ 
+
+</body>
+
+</html>
