@@ -252,7 +252,6 @@ footer nav .active a {
 }
 
 .round-img {
-    border: none;
     border-radius: 15px;
     float: left;
     margin-right: 15px;
@@ -270,6 +269,27 @@ footer nav .active a {
     border-radius: 1em;
 }
 
+/* blog */
+
+.blog-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.blog-list li {
+    padding-bottom: 10px;
+    padding-left: 24px;
+    background: url(../images/marker1.png) 0 4px no-repeat;
+}
+
+.blog-list a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+.blog-list a:hover {
+    color: #73c936;
+}
 
 
 
