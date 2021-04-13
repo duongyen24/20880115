@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title> 20880115 - Ice-cream - About </title>
+  <title> 20880115 - Ice-cream - Blog </title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -67,6 +67,10 @@
     </nav>
   </header>
   <!--header-->
+
+  <div class="container-fluid" id="small-banner">
+
+  </div>
 
     <!--blog-->
 
@@ -164,28 +168,39 @@
   </script>
 
   <script id="blogs-template" type="text/x-handlebars-template">
-    
-
-  
     {{#each data.data}}
     <div  class="blog py-3">
+      <h4> {{name}} </h4>
     <div> by {{author}} in <a href="#">Blog. {{category.name}} </a> on {{date}} Hits: 210 <a href="#">Comments ({{comments.length}})</a></div>
     <div class="py-3">
         <img src="{{thumbpath}}" alt="" class="round-img">
         {{summary}}
         <br>
         <br>
-        <a href="#" class="readmore">Read more</a>
+        <a href="#" class="readmore" onclick="loadDetails({{id}})" >Read more</a>
     </div>
-  </div>
-
     {{/each}}
+    </div>
 
 
   </script>
 
+  <script id="blogs-details-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="blog py-3">
+      <h4> {{name}} </h4>
+    <div> by {{author}} in <a href="#">Blog. {{category.name}} </a> on {{date}} Hits: 210 <a href="#">Comments ({{comments.length}})</a></div>
+    <div class="py-3">
+        <img src="{{thumbpath}}" alt="" class="round-img">
+        {{{description}}}
+       
+    </div>
   
- 
+    </div>
+    {{/each}}
+
+  </script>
+
 
   <script>
     $(document).ready(function() {     // sau khi web load xong thi moi thuc hien ham nay
@@ -198,6 +213,11 @@
     function loadBlogs(request) {
       loadData(request,"#blogs", "#blogs-template");
     }
+
+    function loadDetails(id) {
+      loadData('blog/${id}','#blogs', '#blogs-details-template');
+    }
+
   </script>
 
 
